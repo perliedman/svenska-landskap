@@ -3,7 +3,7 @@ Svenska Landskap
 
 ![Creative Commons CC BY 4.0](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg)
 
-[Sveriges landskap](https://sv.wikipedia.org/wiki/Landskap_i_Sverige) som öppen geodata i [GeoJSON](http://geojson.org/)-format.
+[Sveriges landskap](https://sv.wikipedia.org/wiki/Landskap_i_Sverige) som öppen geodata i [GeoJSON](http://geojson.org/)-format. [Utforska med interaktiv karta](http://www.liedman.net/svenska-landskap/).
 
 ![Sveriges Landskap](landskap.png)
 
