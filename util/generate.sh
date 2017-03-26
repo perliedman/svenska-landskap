@@ -1,7 +1,6 @@
 #!/bin/bash
 
 INFILE=$1
-OUTFILE=$2
 
 read -d '' group_sql << EOF
 	select 
@@ -46,7 +45,7 @@ EOF
 
 temp=`mktemp landskapXXXXXX.sqlite`
 rm $temp
-ogr2ogr $temp $1 -dialect sqlite -sql "$group_sql" -f sqlite -t_srs EPSG:4326
+ogr2ogr $temp $1 -dialect sqlite -sql "$group_sql" -simplify 5 -f sqlite -t_srs EPSG:4326
 
 vrt=`mktemp landskapXXXXXX.vrt`
 cat >$vrt <<EOF
@@ -67,6 +66,7 @@ read -d '' buffer_sql << EOF
 	FROM src_landskap a, border b
 EOF
 
-ogr2ogr $2 $vrt -dialect sqlite -sql "$buffer_sql" -f GeoJSON
+ogr2ogr svenska-landskap-klippt.geo.json $vrt -dialect sqlite -sql "$buffer_sql" -f GeoJSON -lco COORDINATE_PRECISION=5 -lco RFC7946=YES
+ogr2ogr svenska-landskap.geo.json $temp -f GeoJSON -lco COORDINATE_PRECISION=5 -lco RFC7946=YES
 rm $temp
 rm $vrt
