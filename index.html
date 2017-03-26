@@ -24,8 +24,11 @@
 	<script src="https://unpkg.com/leaflet-hash@0.2.1"></script>
 	<script type="text/javascript">
 		var map = L.map('map');
+		map.attributionControl.setPrefix('<a href="https://github.com/perliedman/svenska-landskap">Svenska Landskap</a>')
 
-		L.tileLayer('https://api.mapbox.com/v4/mapbox.streets/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibGllZG1hbiIsImEiOiJjajBxemNqNnQwMDB6MzJxcTZscWllYzhiIn0.6GKjUiKKFLTWbXxyl3UPAg').addTo(map);
+		L.tileLayer('https://api.mapbox.com/v4/mapbox.streets/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibGllZG1hbiIsImEiOiJjajBxemNqNnQwMDB6MzJxcTZscWllYzhiIn0.6GKjUiKKFLTWbXxyl3UPAg', {
+			attribution: '© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+		}).addTo(map);
 
 		map.setView([62, 15], 5);
 		new L.Hash(map);
@@ -41,7 +44,8 @@
 				dashArray: '2, 5',
 				onEachFeature(f, layer) {
 					layer.bindTooltip(f.properties.landskap, {sticky:true});
-				}
+				},
+				attribution: '&copy; <a href="https://www.lantmateriet.se/sv/Kartor-och-geografisk-information/Kartor/oppna-data/anvandarvillkor/">Lantmäteriet, CC-BY 4.0</a>'
 			}).addTo(map);
 		});
 		req.open('GET', 'svenska-landskap.geo.json');
