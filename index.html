@@ -27,7 +27,9 @@
 		var map = L.map('map');
 		map.attributionControl.setPrefix('<a href="https://github.com/perliedman/svenska-landskap">Svenska Landskap</a>')
 
-		L.tileLayer('https://api.mapbox.com/v4/mapbox.streets/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibGllZG1hbiIsImEiOiJjajBxemNqNnQwMDB6MzJxcTZscWllYzhiIn0.6GKjUiKKFLTWbXxyl3UPAg', {
+		L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v11/{z}/{x}/{y}?access_token=pk.eyJ1IjoibGllZG1hbiIsImEiOiJjajBxemNqNnQwMDB6MzJxcTZscWllYzhiIn0.6GKjUiKKFLTWbXxyl3UPAg', {
+			tileSize: 512,
+			zoomOffset: -1,
 			attribution: '© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 		}).addTo(map);
 
