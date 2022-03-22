@@ -9,7 +9,7 @@ Svenska Landskap
 
 Att hitta en detaljerad [karta över Hisingens landskapsgräns](https://twitter.com/manierahl/status/844257440090783746) visar sig förvånansvärt svårt, och att ens hitta grunddata är icke-trivialt. Det här repot försöker råda bot på problemet genom att publicera Sveriges landskap som GeoJSON.
 
-Datat bygger på [Lantmäteriets Distriktskarta](https://www.lantmateriet.se/sv/Kartor-och-geografisk-information/Kartor/Geografiska-teman/gsd-distriktsindelning/) och är öppen data licensierad som [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+Datat bygger på [Lantmäteriets Distriktskarta](https://www.lantmateriet.se/sv/Kartor-och-geografisk-information/geodataprodukter/produktlista/distriktsindelning/) och är öppen data licensierad som [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
 
 Repot innehåller två dataset:
 
